@@ -351,6 +351,7 @@ db_data: {}
 ```
 
     - Перезапустить контейнеры:
+
     ```bash
     docker-compose down
     docker-compose up -d
@@ -366,4 +367,4 @@ db_data: {}
 
 1. Docker Documentation. Official Docker Documentation. URL: https://docs.docker.com/
 2. Docker Compose Documentation. Docker Compose Reference. URL: https://docs.docker.com/compose/
-3. MySQL Documentation. Official MySQL 8.0 Reference Manual. URL:
+3. MySQL Documentation. Official MySQL 8.0 Reference Manual. URL: https://dev.mysql.com/doc/refman/8.0/en/
