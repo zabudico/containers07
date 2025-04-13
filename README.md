@@ -282,7 +282,7 @@ FLUSH PRIVILEGES;
 
 ### 6. Ответы на вопросы
 
-    1. В каком порядке запускаются контейнеры?
+1. В каком порядке запускаются контейнеры?
 
     - Контейнеры запускаются в порядке, определенном зависимостями в docker-compose.yml. В данном случае:
 
@@ -290,7 +290,7 @@ FLUSH PRIVILEGES;
     -- Затем backend и frontend, так как они используют сеть internal и тома, но явных зависимостей (depends_on) нет.
     -- Порядок не строго фиксирован, но Docker Compose старается запускать сервисы параллельно, если не указано иное.
 
-    2. Где хранятся данные базы данных?
+2. Где хранятся данные базы данных?
 
     - Данные базы данных хранятся в Docker-томе `db_data`, который смонтирован в `/var/lib/mysql` контейнера `database`:
 
@@ -301,7 +301,7 @@ FLUSH PRIVILEGES;
 
     - Физически том находится в хранилище Docker (на Windows обычно в `C:\Users\<User>\AppData\Local\Docker\wsl\data).`
 
-    3. Как называются контейнеры проекта?
+3. Как называются контейнеры проекта?
 
     Контейнеры автоматически именуются по шаблону `<project_name>_<service_name>_1`. Для проекта containers07:
 
@@ -309,7 +309,7 @@ FLUSH PRIVILEGES;
         `containers07-backend-1`
         `containers07-frontend-1`
 
-    4. Как добавить файл `app.env` с переменной `APP_VERSION` для `backend` и `frontend`?
+4. Как добавить файл `app.env` с переменной `APP_VERSION` для `backend` и `frontend`?
 
     - Создать файл `app.env` в корне проекта:
 
@@ -318,6 +318,7 @@ FLUSH PRIVILEGES;
     ```
 
     - Обновить `docker-compose.yml`, добавив `env_file` для сервисов `backend` и `frontend`:
+
 
 ```yaml
 services:
